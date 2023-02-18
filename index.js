@@ -4,16 +4,7 @@ const createTaskBtnEl = document.getElementById('create-task-btn');
 
 //task list
 const showTaskSectionEl = document.getElementById('show-task-section');
-/* const deleteTaskBtnElList = []; // = document.getElementsByClassName('delete-task-btn');
-const existingDeleteBtns = document.getElementsByClassName('delete-task-btn'); */
-/* existingDeleteBtns.forEach(elem => {
-    deleteTaskBtnElList.push(elem);
-}); */
 
-/* for(let i = 0; i < existingDeleteBtns.length; i++) {
-    deleteTaskBtnElList.push(existingDeleteBtns[i]);
-}
- */
 //create task button listener
 createTaskBtnEl.addEventListener('click', () => {
 
@@ -29,7 +20,7 @@ createTaskBtnEl.addEventListener('click', () => {
     const taskListContainerEl = document.createElement('div');
     taskListContainerEl.className = 'task-list-container';
 
-    const deleteTaskBtnEl = document.createElement('button'); //"Uncaught TypeError: Assignment to constant variable" const => let
+    const deleteTaskBtnEl = document.createElement('button');
     deleteTaskBtnEl.className = 'delete-task-btn';
     deleteTaskBtnEl.addEventListener('click', function() {
         showTaskSectionEl.removeChild(taskListContainerEl);
@@ -50,14 +41,5 @@ createTaskBtnEl.addEventListener('click', () => {
     showTaskSectionEl.appendChild(taskListContainerEl);
 
     createTaskInputEl.value = '';
-
-    /* deleteTaskBtnElList.push(deleteTaskBtnEl);
-
-    for(let i = 0; i < deleteTaskBtnElList.length; i++) {
-        deleteTaskBtnElList[i].addEventListener('click', function() {
-            console.log('button: ' + i);
-            console.log(deleteTaskBtnElList);
-        });
-    } */
 
 });
